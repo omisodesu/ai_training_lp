@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Defense to Offense | 中小企業向けAI活用研修 - 株式会社がだんだん</title>
+  <meta name="description" content="助成金活用で実質10万円。元・新聞販売店主が教える、守りの経営を攻めに変えるAI実践研修。">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0F172A',
+            secondary: '#334155',
+            cta: '#0369A1',
+            accent: '#CA8A04',
+            success: '#16A34A',
+            background: '#F8FAFC',
+            surface: '#FFFFFF',
+            border: '#E2E8F0',
+          },
+          fontFamily: {
+            heading: ['Poppins', 'Noto Sans JP', 'sans-serif'],
+            body: ['Noto Sans JP', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Noto Sans JP', sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', 'Noto Sans JP', sans-serif; }
+    .gradient-text {
+      background: linear-gradient(135deg, #0369A1 0%, #0F172A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .price-slash {
+      position: relative;
+    }
+    .price-slash::after {
+      content: '';
+      position: absolute;
+      left: -5%;
+      right: -5%;
+      top: 50%;
+      height: 3px;
+      background: #EF4444;
+      transform: rotate(-8deg);
+    }
+  </style>
+</head>
+<body class="bg-background text-primary antialiased">
+
+  <!-- Navigation -->
+  <nav class="fixed top-4 left-4 right-4 z-50">
+    <div class="max-w-6xl mx-auto bg-white/90 backdrop-blur-md rounded-2xl shadow-lg border border-border px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <span class="font-heading font-semibold text-lg">がだんだん</span>
+        </div>
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-secondary">
+          <a href="#problem" class="hover:text-primary transition-colors cursor-pointer">課題</a>
+          <a href="#solution" class="hover:text-primary transition-colors cursor-pointer">解決策</a>
+          <a href="#cases" class="hover:text-primary transition-colors cursor-pointer">導入事例</a>
+          <a href="#curriculum" class="hover:text-primary transition-colors cursor-pointer">カリキュラム</a>
+          <a href="#pricing" class="hover:text-primary transition-colors cursor-pointer">料金</a>
+        </div>
+        <a href="#contact" class="bg-cta hover:bg-cta/90 text-white px-5 py-2.5 rounded-lg font-medium text-sm transition-colors cursor-pointer">
+          無料相談
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <!-- Trust Badges -->
+          <div class="flex flex-wrap gap-3 mb-6">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-accent/10 text-accent rounded-full text-xs font-medium">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.59L19 9l-8 8z"/>
+              </svg>
+              厚労省助成金対象
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/5 text-primary rounded-full text-xs font-medium">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l4.59-4.59L18 11l-6 6z"/>
+              </svg>
+              導入実績50社+
+            </span>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-6">
+            <span class="text-secondary">守りの経営を、</span><br>
+            <span class="gradient-text">攻めに変える。</span>
+          </h1>
+
+          <p class="text-lg text-secondary mb-8 leading-relaxed">
+            AIは魔法ではなく、<strong class="text-primary">最強の召使</strong>。<br>
+            元・新聞販売店主のCEOが教える、<br class="hidden sm:block">
+            中小企業のための実践型AI活用研修。
+          </p>
+
+          <!-- Price Highlight -->
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-border mb-8">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="flex-shrink-0">
+                <span class="text-sm text-secondary">通常価格</span>
+                <div class="price-slash text-2xl font-bold text-gray-400">¥400,000</div>
+              </div>
+              <svg class="w-8 h-8 text-success flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+              </svg>
+              <div class="flex-shrink-0">
+                <span class="text-sm text-success font-medium">助成金適用後</span>
+                <div class="text-3xl font-bold text-success">¥100,000</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 text-sm text-secondary">
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              <span>最大75%OFF（人材開発支援助成金活用）</span>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-cta hover:bg-cta/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors cursor-pointer">
+              助成金シミュレーション
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#curriculum" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-primary px-8 py-4 rounded-xl font-semibold border border-border transition-colors cursor-pointer">
+              カリキュラムを見る
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual -->
+        <div class="relative">
+          <div class="bg-gradient-to-br from-cta/10 to-primary/5 rounded-3xl p-8 lg:p-12">
+            <div class="bg-white rounded-2xl shadow-xl p-6 transform rotate-1 hover:rotate-0 transition-transform">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                <div class="w-3 h-3 rounded-full bg-green-400"></div>
+              </div>
+              <div class="space-y-3">
+                <div class="h-4 bg-primary/10 rounded w-3/4"></div>
+                <div class="h-4 bg-cta/20 rounded w-full"></div>
+                <div class="h-4 bg-primary/10 rounded w-5/6"></div>
+                <div class="mt-6 p-4 bg-success/10 rounded-lg border border-success/20">
+                  <div class="flex items-center gap-2 text-success font-medium text-sm">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    電話対応時間 29時間削減
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Floating Badge -->
+            <div class="absolute -bottom-4 -left-4 bg-accent text-white px-4 py-2 rounded-lg shadow-lg font-medium text-sm">
+              2日間で即戦力化
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section id="problem" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="inline-block px-4 py-1.5 bg-red-50 text-red-600 rounded-full text-sm font-medium mb-4">
+          こんな悩みありませんか？
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold mb-4">
+          高価なAIツール、<br class="sm:hidden">眠っていませんか？
+        </h2>
+      </div>
+
+      <!-- Pain Points Grid -->
+      <div class="grid md:grid-cols-3 gap-6 mb-16">
+        <div class="p-6 bg-background rounded-2xl border border-border hover:shadow-lg transition-shadow cursor-pointer">
+          <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-lg mb-2">高価なツールが眠っている</h3>
+          <p class="text-secondary text-sm leading-relaxed">
+            ChatGPT Plus、Copilot...契約したものの、結局使いこなせず月額だけが消えていく。
+          </p>
+        </div>
+
+        <div class="p-6 bg-background rounded-2xl border border-border hover:shadow-lg transition-shadow cursor-pointer">
+          <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-lg mb-2">若手に丸投げ状態</h3>
+          <p class="text-secondary text-sm leading-relaxed">
+            「AIは若い子に任せた」で終わり。経営判断に活かせる人材が育っていない。
+          </p>
+        </div>
+
+        <div class="p-6 bg-background rounded-2xl border border-border hover:shadow-lg transition-shadow cursor-pointer">
+          <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-lg mb-2">何から始めればいいかわからない</h3>
+          <p class="text-secondary text-sm leading-relaxed">
+            セミナーに出ても「すごい」で終わり。自社で何をどう使えばいいのか不明。
+          </p>
+        </div>
+      </div>
+
+      <!-- Founder Story -->
+      <div class="bg-gradient-to-br from-primary to-secondary rounded-3xl p-8 lg:p-12 text-white">
+        <div class="grid lg:grid-cols-5 gap-8 items-center">
+          <div class="lg:col-span-3">
+            <span class="inline-block px-3 py-1 bg-white/10 rounded-full text-sm mb-4">
+              講師自身の経験
+            </span>
+            <h3 class="text-2xl sm:text-3xl font-heading font-bold mb-4">
+              「私も、新聞販売店で<br>同じ苦しみを経験しました」
+            </h3>
+            <p class="text-white/80 leading-relaxed mb-6">
+              朝3時起き、配達、集金、クレーム対応...。
+              アナログな現場で、人手不足と戦いながら毎日を過ごしていました。<br><br>
+              だからこそわかる。<strong class="text-white">「ITが苦手」は言い訳じゃない。</strong>
+              本当に使えるツールと、現場に落とし込む方法を知らないだけなんです。
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold">福井 俊保</div>
+                <div class="text-white/60 text-sm">株式会社がだんだん CEO / 元・新聞販売店主</div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-2">
+            <div class="bg-white/10 backdrop-blur rounded-2xl p-6">
+              <div class="text-center">
+                <div class="text-5xl font-heading font-bold text-accent mb-2">15年</div>
+                <div class="text-white/80 text-sm">新聞販売店経営</div>
+              </div>
+              <div class="border-t border-white/10 my-4"></div>
+              <div class="text-center">
+                <div class="text-5xl font-heading font-bold text-accent mb-2">50+</div>
+                <div class="text-white/80 text-sm">企業研修実績</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Section -->
+  <section id="solution" class="py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="inline-block px-4 py-1.5 bg-cta/10 text-cta rounded-full text-sm font-medium mb-4">
+          Defense to Offense
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold mb-4">
+          現場で「即」使えるAI活用術
+        </h2>
+        <p class="text-secondary max-w-2xl mx-auto">
+          高度なプログラミング知識は不要。<br>
+          あなたの会社のデータを使って、明日から業務効率化を実現。
+        </p>
+      </div>
+
+      <!-- Solution Cards -->
+      <div class="grid lg:grid-cols-3 gap-8 mb-16">
+        <div class="bg-white rounded-2xl p-8 shadow-lg border border-border hover:shadow-xl transition-shadow cursor-pointer">
+          <div class="w-14 h-14 bg-cta/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+            </svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl mb-3">会議の自動文字起こし</h3>
+          <p class="text-secondary text-sm leading-relaxed mb-4">
+            <strong>Tactiq</strong>を使って、Zoom/Teams会議を自動で文字起こし。議事録作成時間を90%削減。
+          </p>
+          <div class="flex items-center gap-2 text-cta text-sm font-medium">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            Day1で習得
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-lg border border-border hover:shadow-xl transition-shadow cursor-pointer">
+          <div class="w-14 h-14 bg-success/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl mb-3">社内ナレッジの資産化</h3>
+          <p class="text-secondary text-sm leading-relaxed mb-4">
+            <strong>NotebookLM</strong>で社内マニュアルやFAQを学習。新人教育や問い合わせ対応を自動化。
+          </p>
+          <div class="flex items-center gap-2 text-success text-sm font-medium">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            Day2で構築
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-lg border border-border hover:shadow-xl transition-shadow cursor-pointer">
+          <div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
+            </svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl mb-3">自社専用AIの構築</h3>
+          <p class="text-secondary text-sm leading-relaxed mb-4">
+            <strong>RAG</strong>技術で、御社のデータだけを参照するAIを構築。機密情報も安全に活用。
+          </p>
+          <div class="flex items-center gap-2 text-accent text-sm font-medium">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            Day2で実装
+          </div>
+        </div>
+      </div>
+
+      <!-- Key Message -->
+      <div class="text-center bg-primary/5 rounded-2xl p-8 lg:p-12">
+        <blockquote class="text-2xl sm:text-3xl font-heading font-semibold text-primary mb-4">
+          「AIは魔法ではなく、最強の召使」
+        </blockquote>
+        <p class="text-secondary max-w-xl mx-auto">
+          正しい指示（プロンプト）を出せば、24時間365日働いてくれる。<br>
+          その「指示の出し方」を、2日間で徹底的にお伝えします。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies Section -->
+  <section id="cases" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="inline-block px-4 py-1.5 bg-success/10 text-success rounded-full text-sm font-medium mb-4">
+          導入事例
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold mb-4">
+          実際の成果をご覧ください
+        </h2>
+      </div>
+
+      <!-- Case Study Cards -->
+      <div class="grid lg:grid-cols-3 gap-8">
+        <!-- Case 1 -->
+        <div class="bg-background rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-shadow cursor-pointer">
+          <div class="bg-gradient-to-br from-cta/20 to-cta/5 p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow">
+                <svg class="w-5 h-5 text-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                </svg>
+              </div>
+              <span class="text-sm font-medium text-cta">不動産業</span>
+            </div>
+            <div class="text-4xl font-heading font-bold text-primary">80%</div>
+            <div class="text-secondary text-sm">図面作成時間削減</div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold mb-2">物件図面の自動生成</h3>
+            <p class="text-secondary text-sm leading-relaxed">
+              間取り情報から図面を自動生成。1件あたり2時間かかっていた作業が20分に短縮。
+            </p>
+          </div>
+        </div>
+
+        <!-- Case 2 -->
+        <div class="bg-background rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-shadow cursor-pointer">
+          <div class="bg-gradient-to-br from-success/20 to-success/5 p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow">
+                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                </svg>
+              </div>
+              <span class="text-sm font-medium text-success">小売業</span>
+            </div>
+            <div class="text-4xl font-heading font-bold text-primary">29h</div>
+            <div class="text-secondary text-sm">月間電話対応時間削減</div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold mb-2">電話問い合わせの自動対応</h3>
+            <p class="text-secondary text-sm leading-relaxed">
+              よくある質問をAIチャットボットで自動回答。スタッフは接客に集中できるように。
+            </p>
+          </div>
+        </div>
+
+        <!-- Case 3 -->
+        <div class="bg-background rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-shadow cursor-pointer">
+          <div class="bg-gradient-to-br from-accent/20 to-accent/5 p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow">
+                <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <span class="text-sm font-medium text-accent">業界組合</span>
+            </div>
+            <div class="text-4xl font-heading font-bold text-primary">100%</div>
+            <div class="text-secondary text-sm">法規制チェック自動化</div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold mb-2">法規制・コンプライアンス対応</h3>
+            <p class="text-secondary text-sm leading-relaxed">
+              膨大な規制文書をAIで学習。会員企業からの問い合わせに即座に正確な回答を提供。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curriculum Section -->
+  <section id="curriculum" class="py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+          カリキュラム
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold mb-4">
+          2日間で「使える」を実感
+        </h2>
+        <p class="text-secondary max-w-2xl mx-auto">
+          座学だけでなく、実際に手を動かすワークショップ形式。<br>
+          御社の課題を題材に、具体的な解決策を一緒に構築します。
+        </p>
+      </div>
+
+      <!-- Timeline -->
+      <div class="grid lg:grid-cols-2 gap-8">
+        <!-- Day 1 -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg border border-border">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-16 h-16 bg-cta rounded-2xl flex items-center justify-center text-white font-heading font-bold text-xl">
+              Day1
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-xl">基礎・効率化編</h3>
+              <p class="text-secondary text-sm">9:00 - 17:00（7時間）</p>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-cta/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="text-cta text-xs font-bold">1</span>
+              </div>
+              <div>
+                <div class="font-medium">AI基礎講座</div>
+                <div class="text-secondary text-sm">ChatGPT/Claude/Geminiの使い分け</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-cta/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="text-cta text-xs font-bold">2</span>
+              </div>
+              <div>
+                <div class="font-medium">プロンプトエンジニアリング</div>
+                <div class="text-secondary text-sm">AIに正しく指示を出す技術</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-cta/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="text-cta text-xs font-bold">3</span>
+              </div>
+              <div>
+                <div class="font-medium">業務効率化ツール実践</div>
+                <div class="text-secondary text-sm">Tactiq, Gamma, Canva AI等</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-cta/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="text-cta text-xs font-bold">4</span>
+              </div>
+              <div>
+                <div class="font-medium">ハンズオンワークショップ</div>
+                <div class="text-secondary text-sm">自社業務でのAI活用演習</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-6 border-t border-border">
+            <div class="flex items-center gap-2 text-cta text-sm font-medium">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              ゴール：日常業務の効率化を実現
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg border border-border">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-16 h-16 bg-success rounded-2xl flex items-center justify-center text-white font-heading font-bold text-xl">
+              Day2
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-xl">創造・資産化編</h3>
+              <p class="text-secondary text-sm">9:00 - 17:00（7時間）</p>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-success/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="text-success text-xs font-bold">1</span>
+              </div>
+              <div>
+                <div class="font-medium">RAG基礎とNotebookLM</div>
+                <div class="text-secondary text-sm">自社データを活用する仕組み</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-success/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="text-success text-xs font-bold">2</span>
+              </div>
+              <div>
+                <div class="font-medium">社内ナレッジベース構築</div>
+                <div class="text-secondary text-sm">マニュアル・FAQ・ノウハウの資産化</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-success/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="text-success text-xs font-bold">3</span>
+              </div>
+              <div>
+                <div class="font-medium">自社専用AIの設計</div>
+                <div class="text-secondary text-sm">御社だけのAIアシスタント構築</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-success/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="text-success text-xs font-bold">4</span>
+              </div>
+              <div>
+                <div class="font-medium">運用・展開プランニング</div>
+                <div class="text-secondary text-sm">社内浸透のためのロードマップ</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-6 border-t border-border">
+            <div class="flex items-center gap-2 text-success text-sm font-medium">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              ゴール：自社専用AIの稼働開始
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="inline-block px-4 py-1.5 bg-success/10 text-success rounded-full text-sm font-medium mb-4">
+          料金プラン
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold mb-4">
+          助成金活用で最大75%OFF
+        </h2>
+        <p class="text-secondary max-w-2xl mx-auto">
+          人材開発支援助成金を活用すれば、<br>
+          高品質な研修を大幅にお得に受講いただけます。
+        </p>
+      </div>
+
+      <!-- Pricing Card -->
+      <div class="bg-gradient-to-br from-primary to-secondary rounded-3xl p-8 lg:p-12 text-white">
+        <div class="grid lg:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 class="text-2xl font-heading font-bold mb-6">2日間 集中研修プラン</h3>
+
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-success flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Day1: 基礎・効率化編（7時間）</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-success flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Day2: 創造・資産化編（7時間）</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-success flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>教材・ワークシート一式</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-success flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>受講後30日間メールサポート</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-success flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>助成金申請サポート付き</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 text-primary">
+            <div class="text-center mb-6">
+              <div class="text-sm text-secondary mb-2">通常価格</div>
+              <div class="price-slash text-3xl font-bold text-gray-400 mb-4">¥400,000</div>
+              <div class="text-sm text-success font-medium mb-2">助成金適用後（75%OFF）</div>
+              <div class="text-5xl font-heading font-bold text-success">¥100,000</div>
+              <div class="text-secondary text-sm mt-2">（税込）1名あたり</div>
+            </div>
+
+            <div class="border-t border-border pt-6">
+              <div class="flex items-start gap-2 text-sm text-secondary mb-4">
+                <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                </svg>
+                <span>人材開発支援助成金（事業展開等リスキリング支援コース）適用の場合</span>
+              </div>
+              <a href="#contact" class="block w-full bg-cta hover:bg-cta/90 text-white text-center py-4 rounded-xl font-semibold transition-colors cursor-pointer">
+                助成金シミュレーションを受ける
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Section -->
+  <section id="trust" class="py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="inline-block px-4 py-1.5 bg-accent/10 text-accent rounded-full text-sm font-medium mb-4">
+          講師紹介
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold mb-4">
+          現場を知る講師が教えます
+        </h2>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+        <!-- Profile Card -->
+        <div class="lg:col-span-2 bg-white rounded-2xl p-8 shadow-lg border border-border">
+          <div class="flex flex-col sm:flex-row gap-6">
+            <div class="flex-shrink-0">
+              <div class="w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center">
+                <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-2xl font-heading font-bold mb-1">福井 俊保</h3>
+              <p class="text-cta font-medium mb-4">株式会社がだんだん 代表取締役CEO</p>
+              <p class="text-secondary leading-relaxed mb-6">
+                15年間の新聞販売店経営を経て、テック企業CEOに転身。
+                「現場のアナログ」と「最先端のデジタル」の両方を知る稀有な経歴を持つ。<br><br>
+                中小企業が直面する「人手不足」「属人化」「IT苦手」の壁を、
+                AIの力で突破するための実践的メソッドを開発。
+                これまで50社以上の中小企業にAI導入支援を実施。
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-primary/5 rounded-full text-xs font-medium">元・新聞販売店主</span>
+                <span class="px-3 py-1 bg-primary/5 rounded-full text-xs font-medium">AI活用コンサルタント</span>
+                <span class="px-3 py-1 bg-primary/5 rounded-full text-xs font-medium">中小企業診断士</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats Card -->
+        <div class="space-y-4">
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-border text-center">
+            <div class="text-4xl font-heading font-bold text-primary mb-1">15年</div>
+            <div class="text-secondary text-sm">新聞販売店経営</div>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-border text-center">
+            <div class="text-4xl font-heading font-bold text-cta mb-1">50+</div>
+            <div class="text-secondary text-sm">企業導入実績</div>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-border text-center">
+            <div class="text-4xl font-heading font-bold text-success mb-1">95%</div>
+            <div class="text-secondary text-sm">受講者満足度</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+          よくある質問
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold mb-4">
+          不安を解消します
+        </h2>
+      </div>
+
+      <!-- FAQ Items -->
+      <div class="space-y-4">
+        <details class="group bg-background rounded-2xl border border-border">
+          <summary class="flex items-center justify-between p-6 cursor-pointer">
+            <span class="font-semibold pr-4">ITやパソコンが苦手でも大丈夫ですか？</span>
+            <svg class="w-5 h-5 text-secondary flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-secondary">
+            <p>はい、全く問題ありません。本研修は「ITが苦手な方」を前提に設計しています。講師自身が元・新聞販売店主で、アナログな現場から始めた経験があります。専門用語を使わず、実際の業務に即した形で丁寧に解説します。</p>
+          </div>
+        </details>
+
+        <details class="group bg-background rounded-2xl border border-border">
+          <summary class="flex items-center justify-between p-6 cursor-pointer">
+            <span class="font-semibold pr-4">自社の機密情報をAIに入れても安全ですか？</span>
+            <svg class="w-5 h-5 text-secondary flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-secondary">
+            <p>研修では、セキュリティを最優先に考えたツール選定と運用方法をお伝えします。RAG技術を使えば、データを外部に送信せずに自社内でAIを活用することも可能です。御社のセキュリティポリシーに合わせた導入方法をご提案します。</p>
+          </div>
+        </details>
+
+        <details class="group bg-background rounded-2xl border border-border">
+          <summary class="flex items-center justify-between p-6 cursor-pointer">
+            <span class="font-semibold pr-4">助成金の申請は難しくないですか？</span>
+            <svg class="w-5 h-5 text-secondary flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-secondary">
+            <p>当社が申請サポートを無料で行います。必要書類の準備から申請手続きまで、経験豊富なスタッフがフルサポート。これまで多くの企業様の申請をお手伝いしてきた実績がありますので、ご安心ください。</p>
+          </div>
+        </details>
+
+        <details class="group bg-background rounded-2xl border border-border">
+          <summary class="flex items-center justify-between p-6 cursor-pointer">
+            <span class="font-semibold pr-4">研修後のフォローアップはありますか？</span>
+            <svg class="w-5 h-5 text-secondary flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-secondary">
+            <p>研修終了後30日間のメールサポートが含まれています。実務で使い始めてから生じる疑問や課題に対して、講師が直接回答します。また、追加のコンサルティングや継続研修もオプションでご用意しています。</p>
+          </div>
+        </details>
+
+        <details class="group bg-background rounded-2xl border border-border">
+          <summary class="flex items-center justify-between p-6 cursor-pointer">
+            <span class="font-semibold pr-4">オンラインでの受講は可能ですか？</span>
+            <svg class="w-5 h-5 text-secondary flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-secondary">
+            <p>はい、Zoom/Teamsを使ったオンライン研修にも対応しています。全国どこからでも受講可能です。対面をご希望の場合は、御社への訪問研修も承ります（別途交通費）。</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-gradient-to-br from-cta to-primary rounded-3xl p-8 lg:p-12 text-white text-center">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold mb-4">
+          まずは無料相談から
+        </h2>
+        <p class="text-white/80 mb-8 max-w-xl mx-auto">
+          御社の課題をヒアリングし、最適なAI活用プランと助成金シミュレーションをご提案します。お気軽にご相談ください。
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <a href="#" class="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/90 transition-colors cursor-pointer">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+            無料相談を予約する
+          </a>
+          <a href="#" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-semibold border border-white/20 transition-colors cursor-pointer">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            資料請求
+          </a>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-white/60">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span>相談無料</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span>助成金シミュレーション付き</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span>オンライン対応可</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-primary text-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <span class="font-heading font-semibold text-lg">株式会社がだんだん</span>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed mb-4">
+            中小企業のAI活用を支援し、<br>
+            守りの経営を攻めに変える。
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-4">サービス</h4>
+          <ul class="space-y-2 text-sm text-white/60">
+            <li><a href="#curriculum" class="hover:text-white transition-colors cursor-pointer">AI研修プログラム</a></li>
+            <li><a href="#cases" class="hover:text-white transition-colors cursor-pointer">導入事例</a></li>
+            <li><a href="#pricing" class="hover:text-white transition-colors cursor-pointer">料金プラン</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-4">お問い合わせ</h4>
+          <ul class="space-y-2 text-sm text-white/60">
+            <li><a href="#contact" class="hover:text-white transition-colors cursor-pointer">無料相談</a></li>
+            <li><a href="#faq" class="hover:text-white transition-colors cursor-pointer">よくある質問</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-8 text-center text-sm text-white/40">
+        <p>&copy; 2024 株式会社がだんだん All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
