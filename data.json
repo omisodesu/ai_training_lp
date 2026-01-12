@@ -1,0 +1,28 @@
+{
+  "kpi": [
+    { "label": "2025年 導入実績", "value": "4社 / 12名", "note": "完了案件" },
+    { "label": "2026年上期（確定）", "value": "41名", "note": "受注・アポイント確定" },
+    { "label": "助成金活用", "value": "実質 100,000円/人〜", "note": "適用条件により変動" }
+  ],
+  "growth": [
+    { "label": "2025（通年）", "value": 12 },
+    { "label": "2026（上期確定）", "value": 41 }
+  ],
+  "clients2025": [
+    { "name": "エブネット", "people": 1, "period": "4月・5月" },
+    { "name": "日本シェア協同組合", "people": 6, "period": "8月" },
+    { "name": "ベルテック株式会社", "people": 1, "period": "8月" },
+    { "name": "福松不動産販売株式会社", "people": 4, "period": "9月" }
+  ],
+  "clients2026Confirmed": [
+    { "status": "確定", "name": "オーアンドケー", "people": 3, "period": "2026年2月" },
+    { "status": "確定", "name": "ビーサポート", "people": 9, "period": "2026年2月" },
+    { "status": "確定", "name": "ワールド", "people": 9, "period": "2026年2月" },
+    { "status": "確定", "name": "りゅっか", "people": 20, "period": "2026年4月" }
+  ],
+  "pipeline": [
+    { "name": "中日総合サービス", "status": "導入調整中", "people": "5名予定" },
+    { "name": "ライフ予防医学", "status": "商談進行中", "people": "人数調整中" },
+    { "name": "プロフィット", "status": "商談進行中", "people": "人数調整中" }
+  ]
+}
